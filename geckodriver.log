@@ -1,0 +1,384 @@
+1670918268133	geckodriver	INFO	Listening on 127.0.0.1:65320
+1670918271201	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65321" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilet4CYJ4"
+1670918271534	Marionette	INFO	Marionette enabled
+1670918271539	Marionette	INFO	Listening on port 65333
+WebDriver BiDi listening on ws://127.0.0.1:65321
+Read port: 65333
+1670918271800	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilet4CYJ4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:65321/devtools/browser/d1d98473-4cad-49eb-b93a-f0039854450b
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1670918294139	Marionette	INFO	Stopped listening on port 65333
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1670918337153	geckodriver	INFO	Listening on 127.0.0.1:65383
+1670918340228	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65384" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileSYAwmd"
+1670918340529	Marionette	INFO	Marionette enabled
+1670918340534	Marionette	INFO	Listening on port 65395
+Read port: 65395
+WebDriver BiDi listening on ws://127.0.0.1:65384
+1670918340618	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileSYAwmd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:65384/devtools/browser/dc36e45e-5f08-4774-abcd-23990d236b4e
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1670918343391	Marionette	INFO	Stopped listening on port 65395
+1671006019426	geckodriver	INFO	Listening on 127.0.0.1:51090
+1671006022487	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51091" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilepyISpZ"
+1671006022998	Marionette	INFO	Marionette enabled
+1671006023009	Marionette	INFO	Listening on port 51103
+Read port: 51103
+WebDriver BiDi listening on ws://127.0.0.1:51091
+1671006023186	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilepyISpZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51091/devtools/browser/217c3597-ca52-4303-98b3-ba4abfad157c
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671006056435	Marionette	INFO	Stopped listening on port 51103
+1671006639900	geckodriver	INFO	Listening on 127.0.0.1:51164
+1671006642996	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51165" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileo4zQ6h"
+1671006643491	Marionette	INFO	Marionette enabled
+1671006643498	Marionette	INFO	Listening on port 51174
+Read port: 51174
+WebDriver BiDi listening on ws://127.0.0.1:51165
+1671006643653	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileo4zQ6h\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51165/devtools/browser/892fc16d-3d9b-4893-9975-021ac6593565
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1671007137577	Marionette	INFO	Stopped listening on port 51174
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "51228" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileDZmhOU"
+1671006711953	Marionette	INFO	Marionette enabled
+1671006711960	Marionette	INFO	Listening on port 51237
+Read port: 51237
+WebDriver BiDi listening on ws://127.0.0.1:51228
+1671006712117	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileDZmhOU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51228/devtools/browser/a4da0384-e079-48ba-97fb-8634a1c4b4ba
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1671006736764	Marionette	INFO	Stopped listening on port 51237
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671006781306	geckodriver	INFO	Listening on 127.0.0.1:51290
+1671006784365	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51291" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileX5bM9t"
+1671006784866	Marionette	INFO	Marionette enabled
+1671006784875	Marionette	INFO	Listening on port 51300
+Read port: 51300
+WebDriver BiDi listening on ws://127.0.0.1:51291
+1671006785040	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileX5bM9t\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51291/devtools/browser/6991c765-9fb9-4be3-8067-cc6c9e0d29df
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1671006798601	Marionette	INFO	Stopped listening on port 51300
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671006865283	geckodriver	INFO	Listening on 127.0.0.1:51349
+1671006868354	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51350" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilefHFvva"
+1671006868851	Marionette	INFO	Marionette enabled
+1671006868859	Marionette	INFO	Listening on port 51359
+Read port: 51359
+WebDriver BiDi listening on ws://127.0.0.1:51350
+1671006869022	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilefHFvva\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51350/devtools/browser/6cd5a3d9-a9ac-4f2c-994c-0a2cf9582b8b
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671007131983	Marionette	INFO	Stopped listening on port 51359
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "51419" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileLDub6J"
+1671006974611	Marionette	INFO	Marionette enabled
+1671006974619	Marionette	INFO	Listening on port 51428
+Read port: 51428
+WebDriver BiDi listening on ws://127.0.0.1:51419
+1671006974789	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileLDub6J\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51419/devtools/browser/4e6f9104-81d9-4a15-9327-d18abf768a1e
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1671007133596	Marionette	INFO	Stopped listening on port 51428
+1517
+Read port: 51517
+WebDriver BiDi listening on ws://127.0.0.1:51508
+1671007095333	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileIQJsbI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51508/devtools/browser/e6b367af-66ce-4434-abe1-f83cdb10b39a
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671007125022	Marionette	INFO	Stopped listening on port 51517
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671007311730	geckodriver	INFO	Listening on 127.0.0.1:51606
+1671007314790	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51607" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilefxzFMe"
+1671007315279	Marionette	INFO	Marionette enabled
+1671007315287	Marionette	INFO	Listening on port 51616
+Read port: 51616
+WebDriver BiDi listening on ws://127.0.0.1:51607
+1671007315442	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilefxzFMe\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51607/devtools/browser/4e63033e-5d7f-4852-83d2-364350aa6919
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1671007333114	Marionette	INFO	Stopped listening on port 51616
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671007350717	geckodriver	INFO	Listening on 127.0.0.1:51671
+1671007353764	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51672" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileg3BvB7"
+1671007354267	Marionette	INFO	Marionette enabled
+1671007354276	Marionette	INFO	Listening on port 51681
+Read port: 51681
+WebDriver BiDi listening on ws://127.0.0.1:51672
+1671007354431	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileg3BvB7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51672/devtools/browser/f56daeac-ef41-4745-ac1b-262d524fa0ee
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1671007389219	Marionette	INFO	Stopped listening on port 51681
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671007391710	geckodriver	INFO	Listening on 127.0.0.1:51743
+1671007394776	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51744" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofile4ddHRN"
+1671007395270	Marionette	INFO	Marionette enabled
+1671007395278	Marionette	INFO	Listening on port 51753
+Read port: 51753
+WebDriver BiDi listening on ws://127.0.0.1:51744
+1671007395429	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofile4ddHRN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51744/devtools/browser/56df79d7-51d2-4504-96c4-e8b4e9b07362
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1671007412736	Marionette	INFO	Stopped listening on port 51753
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671007438672	geckodriver	INFO	Listening on 127.0.0.1:51805
+1671007441755	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51806" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileexITuv"
+1671007442252	Marionette	INFO	Marionette enabled
+1671007442260	Marionette	INFO	Listening on port 51815
+Read port: 51815
+WebDriver BiDi listening on ws://127.0.0.1:51806
+1671007442412	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileexITuv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51806/devtools/browser/840143d7-af39-4379-ba54-9d4806ee5261
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671007475543	Marionette	INFO	Stopped listening on port 51815
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671008371635	geckodriver	INFO	Listening on 127.0.0.1:51934
+1671008374686	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51935" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilegAGTAE"
+1671008375171	Marionette	INFO	Marionette enabled
+1671008375179	Marionette	INFO	Listening on port 51944
+Read port: 51944
+WebDriver BiDi listening on ws://127.0.0.1:51935
+1671008375341	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilegAGTAE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51935/devtools/browser/f1bfcb07-b1bc-405a-b2e6-8bbe67e4f704
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: resource://gre/actors/ContentMetaChild.jsm, line 183: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1671008409420	Marionette	INFO	Stopped listening on port 51944
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671008460544	geckodriver	INFO	Listening on 127.0.0.1:52007
+1671008463606	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52008" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileTU6bWB"
+1671008464095	Marionette	INFO	Marionette enabled
+1671008464103	Marionette	INFO	Listening on port 52018
+Read port: 52018
+WebDriver BiDi listening on ws://127.0.0.1:52008
+1671008464257	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileTU6bWB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52008/devtools/browser/f8bc789e-d59b-4b7c-bb35-73c228fedc3d
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671008809295	Marionette	INFO	Stopped listening on port 52018
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671008825297	geckodriver	INFO	Listening on 127.0.0.1:52140
+1671008828373	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52141" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileK8P1zb"
+1671008828876	Marionette	INFO	Marionette enabled
+1671008828884	Marionette	INFO	Listening on port 52156
+Read port: 52156
+WebDriver BiDi listening on ws://127.0.0.1:52141
+1671008829048	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileK8P1zb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52141/devtools/browser/339200dd-ae16-4aee-837b-f12cdfa702c1
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671008858563	Marionette	INFO	Stopped listening on port 52156
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671009145360	geckodriver	INFO	Listening on 127.0.0.1:52238
+1671009148449	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52239" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileQ4RYtO"
+1671009148953	Marionette	INFO	Marionette enabled
+1671009148961	Marionette	INFO	Listening on port 52248
+Read port: 52248
+WebDriver BiDi listening on ws://127.0.0.1:52239
+1671009149111	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileQ4RYtO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52239/devtools/browser/99f077da-b821-484d-8078-8887f77ff9fd
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1671009483202	Marionette	INFO	Stopped listening on port 52248
+2315
+Read port: 52315
+WebDriver BiDi listening on ws://127.0.0.1:52306
+1671009239629	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileFKvRj3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52306/devtools/browser/0ca8e393-72c9-4c69-b0fa-f6b462054772
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671009265689	Marionette	INFO	Stopped listening on port 52315
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671009427976	geckodriver	INFO	Listening on 127.0.0.1:52387
+1671009431048	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52388" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilevJOl9l"
+1671009431550	Marionette	INFO	Marionette enabled
+1671009431558	Marionette	INFO	Listening on port 52397
+Read port: 52397
+WebDriver BiDi listening on ws://127.0.0.1:52388
+1671009431710	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilevJOl9l\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52388/devtools/browser/373c29b6-142c-4880-819b-5304a70c459f
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671009477726	Marionette	INFO	Stopped listening on port 52397
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671009768809	geckodriver	INFO	Listening on 127.0.0.1:52473
+1671009771883	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52474" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileMzQCoP"
+1671009772372	Marionette	INFO	Marionette enabled
+1671009772381	Marionette	INFO	Listening on port 52484
+Read port: 52484
+WebDriver BiDi listening on ws://127.0.0.1:52474
+1671009772540	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileMzQCoP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52474/devtools/browser/e937dca7-9f3d-4b64-aa6d-cb1071df752e
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1671011207850	Marionette	INFO	Stopped listening on port 52484
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "52587" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileN1JbLf"
+1671011147063	Marionette	INFO	Marionette enabled
+1671011147070	Marionette	INFO	Listening on port 52597
+Read port: 52597
+WebDriver BiDi listening on ws://127.0.0.1:52587
+1671011147230	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileN1JbLf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52587/devtools/browser/e5f5e3c8-c904-4372-ac00-18c44a3e9f4a
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671011211046	Marionette	INFO	Stopped listening on port 52597
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671011276568	geckodriver	INFO	Listening on 127.0.0.1:52652
+1671011279622	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52653" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileGY1jC5"
+1671011280122	Marionette	INFO	Marionette enabled
+1671011280130	Marionette	INFO	Listening on port 52664
+Read port: 52664
+WebDriver BiDi listening on ws://127.0.0.1:52653
+1671011280281	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileGY1jC5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52653/devtools/browser/6b07a682-686f-4290-87fe-a158bf948cc9
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1671012264325	Marionette	INFO	Stopped listening on port 52664
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofile7bsh9j"
+1671011575925	Marionette	INFO	Marionette enabled
+1671011575934	Marionette	INFO	Listening on port 52758
+Read port: 52758
+WebDriver BiDi listening on ws://127.0.0.1:52748
+1671011576099	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofile7bsh9j\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52748/devtools/browser/de8b04a1-bde1-4eda-af81-33f3039e7b06
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1671011597021	Marionette	INFO	Stopped listening on port 52758
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:325:29
+
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671011680981	geckodriver	INFO	Listening on 127.0.0.1:52819
+1671011684029	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52820" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileBhUtpP"
+1671011684480	Marionette	INFO	Marionette enabled
+1671011684488	Marionette	INFO	Listening on port 52830
+Read port: 52830
+WebDriver BiDi listening on ws://127.0.0.1:52820
+1671011684654	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileBhUtpP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52820/devtools/browser/01a3ff5a-86ac-4833-9824-decd41cc348d
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1671011705127	Marionette	INFO	Stopped listening on port 52830
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671011799066	geckodriver	INFO	Listening on 127.0.0.1:52881
+1671011802120	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52882" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofile8Rg1sP"
+1671011802615	Marionette	INFO	Marionette enabled
+1671011802622	Marionette	INFO	Listening on port 52891
+Read port: 52891
+WebDriver BiDi listening on ws://127.0.0.1:52882
+1671011802775	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofile8Rg1sP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52882/devtools/browser/763f55df-fe7d-4490-929e-82c0039e350b
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671011843697	Marionette	INFO	Stopped listening on port 52891
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671012444797	geckodriver	INFO	Listening on 127.0.0.1:53010
+1671012447871	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53011" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileHtqyCb"
+1671012448375	Marionette	INFO	Marionette enabled
+1671012448383	Marionette	INFO	Listening on port 53020
+Read port: 53020
+WebDriver BiDi listening on ws://127.0.0.1:53011
+1671012448535	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileHtqyCb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53011/devtools/browser/3f8f8a74-9655-4a85-ba79-1f6b1fb3dacc
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671012919153	Marionette	INFO	Stopped listening on port 53020
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671012971525	geckodriver	INFO	Listening on 127.0.0.1:53130
+1671012974588	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53131" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileqf1S4d"
+1671012975086	Marionette	INFO	Marionette enabled
+1671012975094	Marionette	INFO	Listening on port 53140
+Read port: 53140
+WebDriver BiDi listening on ws://127.0.0.1:53131
+1671012975251	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileqf1S4d\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53131/devtools/browser/05b4ecd9-f1a9-4771-853c-fcb7bacd3cf4
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671013023068	Marionette	INFO	Stopped listening on port 53140
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671013053985	geckodriver	INFO	Listening on 127.0.0.1:53195
+1671013057032	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53196" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilez9gJ0S"
+1671013057522	Marionette	INFO	Marionette enabled
+1671013057530	Marionette	INFO	Listening on port 53205
+Read port: 53205
+WebDriver BiDi listening on ws://127.0.0.1:53196
+1671013057681	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofilez9gJ0S\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53196/devtools/browser/a000fa63-5abb-4e54-9b6b-a0674e18b189
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671013105249	Marionette	INFO	Stopped listening on port 53205
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1671013190942	geckodriver	INFO	Listening on 127.0.0.1:53254
+1671013193979	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53255" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileP78t58"
+1671013194483	Marionette	INFO	Marionette enabled
+1671013194491	Marionette	INFO	Listening on port 53264
+Read port: 53264
+WebDriver BiDi listening on ws://127.0.0.1:53255
+1671013194639	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\bianc\\AppData\\Local\\Temp\\rust_mozprofileP78t58\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53255/devtools/browser/5937f985-2a86-481e-9afe-1d191b4f57b9
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.osplash.eu."
+1671013221451	Marionette	INFO	Stopped listening on port 53264
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
