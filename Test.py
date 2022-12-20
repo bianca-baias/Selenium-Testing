@@ -20,9 +20,9 @@ driver.get("https://www.osplash.eu") # link of the website to test
 
 #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);") #scroll at the bottom of a page
 
-time.sleep(2)
+time.sleep(3)
 
-# banner = driver.find_element(By.XPATH, '//a[@href="/module/spareparts/mainPage"]') #find element by anchor
+# banner = driver.find_element(By.XPATH, '//a[@href="/module/spareparts/mainPage"]') #find element with anchor
 # banner.click()
 
 #############################################################################################################
@@ -60,8 +60,12 @@ time.sleep(2)
 # add_to_cart = driver.find_element(By.XPATH, "//*[@id='add_to_cart']")
 # add_to_cart.click()
 # time.sleep(3)
-# go_to_cart = driver.find_element(By.XPATH, "/html/body/div[5]/div/div/div[2]/div/div[2]/div/div/a")
+
+# go_to_cart = driver.find_element(By.CSS_SELECTOR, ".cart-content-btn > a:nth-child(2)")
 # go_to_cart.click()
+
+# continue_shopping = driver.find_element(By.CSS_SELECTOR,".cart-content-btn > button:nth-child(1)")
+# continue_shopping.click()
 
 #############################################################################################################
 #login
@@ -88,4 +92,4 @@ time.sleep(2)
 #     except:
 #         print(f"Could not input the following data: {pair}")
 
-# driver.back()
+#############################################################################################################
