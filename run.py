@@ -1,4 +1,5 @@
 from Osplash.osplash import Osplash
 
-inst = Osplash()
-inst.land_first_page()
+with Osplash() as bot:
+    bot.land_first_page()
+    bot.click_on_banner()
