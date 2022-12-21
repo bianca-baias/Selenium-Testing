@@ -19,9 +19,9 @@ class Osplash(webdriver.Firefox):
         self.implicitly_wait(10)
         self.maximize_window()
         
-    # def __exit__(self, exc_type, exc_val, exc_tb): #ends the session after the actions are done
-    #     time.sleep(10)
-    #     self.quit() 
+    def __exit__(self, exc_type, exc_val, exc_tb): #ends the session after the actions are done
+        time.sleep(10)
+        self.quit() 
     
     def land_first_page(self):
         self.get(const.BASE_URL)
@@ -41,11 +41,11 @@ class Osplash(webdriver.Firefox):
         subscribe.click()
     
     def search_product(self):
-        search = self.find_element(By.XPATH, "/html/body/main/header/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/form/input[2]")
+        search = self.find_element(By.XPATH, "//input[@placeholder='Search our catalog']")
         search.send_keys("chlorine")
-        send_search = self.find_element(By.XPATH, "/html/body/main/header/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/form/button/i")
+        send_search=self.find_element(By.CSS_SELECTOR, ".search")
         send_search.click()
-    
+
     def click_on_product(self):
         desired_product = self.find_element(By.XPATH, "/html/body/main/section/div/div[3]/section/section/div[3]/div/div[1]/article[1]")
         desired_product.click()
