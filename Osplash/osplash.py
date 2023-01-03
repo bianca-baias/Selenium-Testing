@@ -2,7 +2,7 @@
 
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.common.by import By  # Set of locators strategies
+from selenium.webdriver.common.by import By 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
@@ -10,12 +10,17 @@ from selenium.webdriver.common.keys import Keys
 import time
 import Osplash.constants as const
 import os
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 class Osplash(webdriver.Firefox):
     def __init__(self, driver_path=r"C:\Users\xcommerce services\Desktop\Folder\Selenium\geckodriver"):
         self.driver_path=driver_path
-        super(Osplash, self).__init__()
+        super(Osplash,self).__init__() #lenovo
+        #DELL
+        #self.firefox_binary=FirefoxBinary(r"C:\Program Files\Mozilla Firefox\firefox.exe")
+        #super(Osplash, self).__init__(firefox_binary=self.firefox_binary)
         os.environ['PATH'] += self.driver_path
+
         self.implicitly_wait(10)
         self.maximize_window()
         
@@ -41,7 +46,8 @@ class Osplash(webdriver.Firefox):
         subscribe.click()
     
     def search_product(self):
-        search = self.find_element(By.XPATH, "//input[@placeholder='Search our catalog']")
+        search = self.find_element(By.CSS_SELECTOR, "input[placeholder]='Search our catalog")
+        #search = self.find_element(By.XPATH, "//input[@placeholder='Search our catalog']")
         search.send_keys("chlorine")
         send_search=self.find_element(By.CSS_SELECTOR, ".search")
         send_search.click()
