@@ -1,6 +1,9 @@
 from Osplash.osplash import Osplash
+import time
 
 with Osplash() as bot:
     bot.land_first_page()
+    time.sleep(2)
     #bot.login()
-    bot.logout()
+    #bot.logout()
+    bot.forgot_password()

@@ -1,16 +1,17 @@
 #describe the methods that we are going to call 
 
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By 
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import time
 import Osplash.constants as const
 import os
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+#from selenium.webdriver.support.ui import WebDriverWait
+#from selenium.webdriver.common.action_chains import ActionChains
+#from selenium.webdriver.firefox.options import Options
+#from selenium.webdriver.support import expected_conditions as EC
+
 
 class Osplash(webdriver.Firefox):
     def __init__(self, driver_path=r"C:\Users\xcommerce services\Desktop\Folder\Selenium\geckodriver"):
@@ -23,7 +24,7 @@ class Osplash(webdriver.Firefox):
         super(Osplash, self).__init__(firefox_binary=self.firefox_binary)
         os.environ['PATH'] += self.driver_path
 
-        self.implicitly_wait(10)
+        self.implicitly_wait(3)
         self.maximize_window()
         
     def __exit__(self, exc_type, exc_val, exc_tb): #ends the session after the actions are done
@@ -32,7 +33,61 @@ class Osplash(webdriver.Firefox):
     
     def land_first_page(self):
         self.get(const.BASE_URL)
-    
+
+    def login(self):
+        id_password= [['', ''], ["", "123456"], ["bianca@xcom", ''], ["bianca@xcom.eu", "12300"], ["bianca", "123456"], ["bianca@xcommerce.eu", "123444"], ["bianca@xcommerce.eu", "123456"]]
+        #id_password = [["bianca@xcommerce.eu", "123456"]]
+        login = self.find_element(By.CSS_SELECTOR, ".user-info > a:nth-child(1) > span:nth-child(2)")
+        login.click()
+
+        for pair in id_password:
+            try:
+                email = self.find_element(By.CSS_SELECTOR, "input[type='email']") 
+                password = self.find_element(By.CSS_SELECTOR, "input[type='password']" )
+                sign_in = self.find_element(By.ID, 'submit-login')
+                email.clear()
+                email.send_keys(pair[0])
+                password.send_keys(pair[1])
+                time.sleep(2)
+                sign_in.click()
+                time.sleep(2)
+                if self.current_url == "https://www.osplash.eu/my-account": #if login was successful
+                    #print(f"Successul sign in with the credentials: email - {pair[0]}, password - {pair[1]}")
+                    break
+            except:
+                print(f"Could not input the following data: {pair}")
+
+    def logout(self):
+        my_account = self.find_element(By.CSS_SELECTOR, ".user-info > a:nth-child(1) > span:nth-child(2)") 
+        my_account.click()
+        if self.current_url == "https://www.osplash.eu/order-history":
+            my_account = self.find_element(By.CSS_SELECTOR, ".account > span:nth-child(2)")
+            my_account.click()
+            sign_out= self.find_element(By.CSS_SELECTOR, "div.text-xs-center:nth-child(1) > a:nth-child(1)")
+            sign_out.click()
+        elif self.current_url == "https://www.osplash.eu/login?back=my-account":
+            print("You are signed out!")
+
+    def forgot_password(self):
+        login = self.find_element(By.CSS_SELECTOR, ".user-info > a:nth-child(1) > span:nth-child(2)")
+        login.click()
+        forgot_psw= self.find_element(By.CLASS_NAME, "forgot-password")
+        forgot_psw.click()
+        test = ["", " ", "123", "@#%", "bianca@", "bianca@xcommerce.eu"]
+        for email in test:
+            mail=self.find_element(By.ID, "email")
+            mail.clear()
+            mail.send_keys(email)
+            self.find_element(By.NAME, "submit").click()
+            time.sleep(2)
+            try:
+                self.find_element(By.NAME, "submit")
+            except:
+                print("Success!")
+                break
+
+
+##################################################################################################################################################
     def click_on_banner(self):
         banner = self.find_element(By.XPATH, '//a[@href="/module/spareparts/mainPage"]')
         banner.click()
@@ -67,39 +122,3 @@ class Osplash(webdriver.Firefox):
 
         # continue_shopping = self.find_element(By.CSS_SELECTOR,".cart-content-btn > button:nth-child(1)")
         # continue_shopping.click()
-
-    def login(self):
-        #id_password= [['', ''], ["", "123456"], ["bianca@xcom", ''], ["bianca@xcom.eu", "12300"], ["bianca", "123456"], ["bianca@xcommerce.eu", "123444"], ["bianca@xcommerce.eu", "123456"]]
-        id_password = [["bianca@xcommerce.eu", "123456"]]
-        login = self.find_element(By.CSS_SELECTOR, ".user-info > a:nth-child(1) > span:nth-child(2)")
-        login.click()
-
-        for pair in id_password:
-            try:
-                email = self.find_element(By.CSS_SELECTOR, "input[type='email']") 
-                password = self.find_element(By.CSS_SELECTOR, "input[type='password']" )
-                sign_in = self.find_element(By.ID, 'submit-login')
-                email.send_keys(Keys.CONTROL + "a")
-                email.send_keys(Keys.DELETE)
-                email.send_keys(pair[0])
-                password.send_keys(pair[1])
-                time.sleep(2)
-                sign_in.click()
-                time.sleep(2)
-                if self.current_url == "https://www.osplash.eu/my-account": #if login was successful
-                    #print(f"Successul sign in with the credentials: email - {pair[0]}, password - {pair[1]}")
-                    break
-            except:
-                print(f"Could not input the following data: {pair}")
-
-    def logout(self):
-        my_account = self.find_element(By.CSS_SELECTOR, ".user-info > a:nth-child(1) > span:nth-child(2)") 
-        my_account.click()
-        if self.current_url == "https://www.osplash.eu/order-history":
-            my_account = self.find_element(By.CSS_SELECTOR, ".account > span:nth-child(2)")
-            my_account.click()
-            sign_out= self.find_element(By.CSS_SELECTOR, "div.text-xs-center:nth-child(1) > a:nth-child(1)")
-            sign_out.click()
-        elif self.current_url == "https://www.osplash.eu/login?back=my-account":
-            print("You are signed out!")
-
