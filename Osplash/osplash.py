@@ -7,8 +7,9 @@ import time
 import Osplash.constants as const
 import os
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+from selenium.webdriver.common.action_chains import ActionChains
+
 #from selenium.webdriver.support.ui import WebDriverWait
-#from selenium.webdriver.common.action_chains import ActionChains
 #from selenium.webdriver.firefox.options import Options
 #from selenium.webdriver.support import expected_conditions as EC
 
@@ -87,6 +88,23 @@ class Osplash(webdriver.Firefox):
                 break
 
 
+    def sign_up(self):
+        login = self.find_element(By.CSS_SELECTOR, ".user-info > a:nth-child(1) > span:nth-child(2)")
+        login.click()
+        sign_up = self.find_element(By.CLASS_NAME, "no-account")
+        sign_up.click()
+        personal=self.find_element(By.XPATH, "//input[@name='is_company' and @value='0']")
+        business=self.find_element(By.XPATH, "//input[@name='is_company' and @value='1']")
+        mr=self.find_element(By.XPATH, "//input[@name='id_gender', @value='1']")
+        mrs=self.find_element(By.XPATH, "//input[@name='id_gender', @value='2']")
+        first_name= self.find_element(By.NAME, "firstname")
+        last_name=self.find_element(By.NAME, "lastname")
+        choose_language=self.find_element(By.XPATH, "//select[@name='id_communication_lang']/option[@value='3']") #1-english, 3-nederlands, 4-francais, 5-espanol, 6-deutch, 7-italiano
+        email=self.find_element(By.XPATH, "//input[@type='email']")
+        #password
+        #check-box-terms
+        #check-box-newsletter
+        #save
 ##################################################################################################################################################
     def click_on_banner(self):
         banner = self.find_element(By.XPATH, '//a[@href="/module/spareparts/mainPage"]')
