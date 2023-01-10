@@ -23,6 +23,7 @@ class Osplash(webdriver.Firefox):
         #DELL
         self.firefox_binary=FirefoxBinary(r"C:\Program Files\Mozilla Firefox\firefox.exe")
         super(Osplash, self).__init__(firefox_binary=self.firefox_binary)
+        
         os.environ['PATH'] += self.driver_path
 
         self.implicitly_wait(3)
@@ -95,16 +96,33 @@ class Osplash(webdriver.Firefox):
         sign_up.click()
         personal=self.find_element(By.XPATH, "//input[@name='is_company' and @value='0']")
         business=self.find_element(By.XPATH, "//input[@name='is_company' and @value='1']")
-        mr=self.find_element(By.XPATH, "//input[@name='id_gender', @value='1']")
-        mrs=self.find_element(By.XPATH, "//input[@name='id_gender', @value='2']")
+        mr=self.find_element(By.XPATH, "//input[@name='id_gender' and @value='1']")
+        mrs=self.find_element(By.XPATH, "//input[@name='id_gender'and @value='2']")
         first_name= self.find_element(By.NAME, "firstname")
         last_name=self.find_element(By.NAME, "lastname")
         choose_language=self.find_element(By.XPATH, "//select[@name='id_communication_lang']/option[@value='3']") #1-english, 3-nederlands, 4-francais, 5-espanol, 6-deutch, 7-italiano
         email=self.find_element(By.XPATH, "//input[@type='email']")
-        #password
-        #check-box-terms
-        #check-box-newsletter
-        #save
+        password=self.find_element(By.XPATH, "//input[@type='password']")
+        check_box_terms=self.find_element(By.XPATH, "//input[@name='psgdpr' and @value='1']")
+        check_box_newsletter=self.find_element(By.XPATH, "//input[@name='newsletter' and @value='1']")
+        save=self.find_element(By.XPATH, "//button[@data-link-action='save-customer']")
+
+    def search_product(self):
+        to_test= ['', 'chlorine tabs', 'ZWCX1119', 'chlorine', 'ZWCX11', 'clorin tabs', 'ZWCX111 9']
+        for test in to_test:
+            search = self.find_element(By.XPATH, "//input[@placeholder='Search our catalog']")
+            #search.clear()
+            search.send_keys(test)
+            send_search=self.find_element(By.CSS_SELECTOR, ".search")
+            send_search.click()
+            time.sleep(2)
+            try:
+                first_product = self.find_element(By.CSS_SELECTOR, "article.col-xs-6:nth-child(1) > div:nth-child(1) > a:nth-child(1)")
+                first_product.click()
+                time.sleep(5)
+            except:
+                print(f"Could not find products by searching: {test}")
+        
 ##################################################################################################################################################
     def click_on_banner(self):
         banner = self.find_element(By.XPATH, '//a[@href="/module/spareparts/mainPage"]')
@@ -120,12 +138,6 @@ class Osplash(webdriver.Firefox):
         subscribe = self.find_element(By.NAME, "submitNewsletter")
         subscribe.click()
     
-    def search_product(self):
-        search = self.find_element(By.XPATH, "//input[@placeholder='Search our catalog']")
-        search.send_keys("chlorine")
-        send_search=self.find_element(By.CSS_SELECTOR, ".search")
-        send_search.click()
-
     def click_on_product(self):
         desired_product = self.find_element(By.XPATH, "/html/body/main/section/div/div[3]/section/section/div[3]/div/div[1]/article[1]")
         desired_product.click()

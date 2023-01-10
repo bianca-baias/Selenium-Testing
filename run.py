@@ -4,4 +4,4 @@ import time
 with Osplash() as bot:
     bot.land_first_page()
     time.sleep(2)
-    bot.sign_up()
+    bot.search_product()
