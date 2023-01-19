@@ -36,28 +36,25 @@ class Osplash(webdriver.Firefox):
     def land_first_page(self):
         self.get(const.BASE_URL)
 
-    def login(self):
-        id_password= [['', ''], ["", "123456"], ["bianca@xcom", ''], ["bianca@xcom.eu", "12300"], ["bianca", "123456"], ["bianca@xcommerce.eu", "123444"], ["bianca@xcommerce.eu", "123456"]]
-        #id_password = [["bianca@xcommerce.eu", "123456"]]
+    def login(self, id=None, psw=None):
         login = self.find_element(By.CSS_SELECTOR, ".user-info > a:nth-child(1) > span:nth-child(2)")
         login.click()
-
-        for pair in id_password:
-            try:
-                email = self.find_element(By.CSS_SELECTOR, "input[type='email']") 
-                password = self.find_element(By.CSS_SELECTOR, "input[type='password']" )
-                sign_in = self.find_element(By.ID, 'submit-login')
-                email.clear()
-                email.send_keys(pair[0])
-                password.send_keys(pair[1])
-                time.sleep(2)
-                sign_in.click()
-                time.sleep(2)
-                if self.current_url == "https://www.osplash.eu/my-account": #if login was successful
-                    #print(f"Successul sign in with the credentials: email - {pair[0]}, password - {pair[1]}")
-                    break
-            except:
-                print(f"Could not input the following data: {pair}")
+        try:
+            email = self.find_element(By.CSS_SELECTOR, "input[type='email']") 
+            password = self.find_element(By.CSS_SELECTOR, "input[type='password']" )
+            sign_in = self.find_element(By.ID, 'submit-login')
+            email.clear()
+            email.send_keys(id)
+            password.send_keys(psw)
+            time.sleep(2)
+            sign_in.click()
+            time.sleep(2)
+            if self.current_url == "https://www.osplash.eu/my-account": #if login was successful
+                print(f"Successul sign in with the credentials: email - {id}, password - {psw}")
+            else:
+                print(f"Failed to login with: email-{id}, password-{psw}")
+        except:
+            print(f"Unable to input login data.")
 
     def logout(self):
         my_account = self.find_element(By.CSS_SELECTOR, ".user-info > a:nth-child(1) > span:nth-child(2)") 
@@ -70,67 +67,129 @@ class Osplash(webdriver.Firefox):
         elif self.current_url == "https://www.osplash.eu/login?back=my-account":
             print("You are signed out!")
 
-    def forgot_password(self):
+    def forgot_password(self, email=None):
         login = self.find_element(By.CSS_SELECTOR, ".user-info > a:nth-child(1) > span:nth-child(2)")
         login.click()
         forgot_psw= self.find_element(By.CLASS_NAME, "forgot-password")
         forgot_psw.click()
-        test = ["", " ", "123", "@#%", "bianca@", "bianca@xcommerce.eu"]
-        for email in test:
-            mail=self.find_element(By.ID, "email")
-            mail.clear()
-            mail.send_keys(email)
-            self.find_element(By.NAME, "submit").click()
-            time.sleep(2)
-            try:
-                self.find_element(By.NAME, "submit")
-            except:
-                print("Success!")
-                break
+        mail=self.find_element(By.ID, "email")
+        mail.clear()
+        mail.send_keys(email)
+        self.find_element(By.NAME, "submit").click()
+        time.sleep(2)
+        try:
+            self.find_element(By.NAME, "submit")
+            print(f"Unsuccessful for email: {email}")
+        except:
+            print("Success!")
 
-
-    def sign_up(self):
+    def sign_up(self, account_type=None, company_name=None, vat=None, social_title=None, first_name=None, last_name=None, language=None, email=None, password=None, newsletter=None):
         login = self.find_element(By.CSS_SELECTOR, ".user-info > a:nth-child(1) > span:nth-child(2)")
         login.click()
         sign_up = self.find_element(By.CLASS_NAME, "no-account")
         sign_up.click()
-        personal=self.find_element(By.XPATH, "//input[@name='is_company' and @value='0']")
+
         business=self.find_element(By.XPATH, "//input[@name='is_company' and @value='1']")
         mr=self.find_element(By.XPATH, "//input[@name='id_gender' and @value='1']")
         mrs=self.find_element(By.XPATH, "//input[@name='id_gender'and @value='2']")
-        first_name= self.find_element(By.NAME, "firstname")
-        last_name=self.find_element(By.NAME, "lastname")
-        choose_language=self.find_element(By.XPATH, "//select[@name='id_communication_lang']/option[@value='3']") #1-english, 3-nederlands, 4-francais, 5-espanol, 6-deutch, 7-italiano
-        email=self.find_element(By.XPATH, "//input[@type='email']")
-        password=self.find_element(By.XPATH, "//input[@type='password']")
+        f_name= self.find_element(By.NAME, "firstname")
+        l_name=self.find_element(By.NAME, "lastname")
+        mail=self.find_element(By.XPATH, "//input[@type='email']")
+        psw=self.find_element(By.XPATH, "//input[@type='password']")
         check_box_terms=self.find_element(By.XPATH, "//input[@name='psgdpr' and @value='1']")
         check_box_newsletter=self.find_element(By.XPATH, "//input[@name='newsletter' and @value='1']")
         save=self.find_element(By.XPATH, "//button[@data-link-action='save-customer']")
-
-    def search_product(self):
-        to_test= ['', 'chlorine tabs', 'ZWCX1119', 'chlorine', 'ZWCX11', 'clorin tabs', 'ZWCX111 9']
-        for test in to_test:
-            search = self.find_element(By.XPATH, "//input[@placeholder='Search our catalog']")
-            #search.clear()
-            search.send_keys(test)
-            send_search=self.find_element(By.CSS_SELECTOR, ".search")
-            send_search.click()
-            time.sleep(2)
-            try:
-                first_product = self.find_element(By.CSS_SELECTOR, "article.col-xs-6:nth-child(1) > div:nth-child(1) > a:nth-child(1)")
-                first_product.click()
-                time.sleep(5)
-            except:
-                print(f"Could not find products by searching: {test}")
         
+        if account_type == "business":
+            business.click()
+            vat_nr= self.find_element(By.XPATH, "//input[@name='siret']")
+            vat_nr.send_keys(vat)
+            company = self.find_element(By.XPATH, "//input[@name='company']")
+            company.send_keys(company_name)
+        #else: #it is already selected, but if you need the path to the personal account button, here it is
+            #personal=self.find_element(By.XPATH, "//input[@name='is_company' and @value='0']")
+            #personal.click()
+
+
+        if social_title == "mr":
+            mr.click()
+        else: 
+            mrs.click()
+
+        f_name.send_keys(first_name)
+        l_name.send_keys(last_name)
+
+        if language == "english":
+            choose_language=self.find_element(By.XPATH, "//select[@name='id_communication_lang']/option[@value='1']")
+            choose_language.click()
+        elif language == "nederlands":
+            choose_language=self.find_element(By.XPATH, "//select[@name='id_communication_lang']/option[@value='3']")
+            choose_language.click()
+        elif language == "francais":
+            choose_language=self.find_element(By.XPATH, "//select[@name='id_communication_lang']/option[@value='4']")
+            choose_language.click()
+        elif language == "espanol":
+            choose_language=self.find_element(By.XPATH, "//select[@name='id_communication_lang']/option[@value='5']")
+            choose_language.click()
+        elif language == "deutch":
+            choose_language=self.find_element(By.XPATH, "//select[@name='id_communication_lang']/option[@value='6']")
+            choose_language.click()
+        elif language == "italiano":
+            choose_language=self.find_element(By.XPATH, "//select[@name='id_communication_lang']/option[@value='7']")
+            choose_language.click()
+        else:
+            print(f"Could not select language: {language}.")
+        
+        mail.send_keys(email)
+        psw.send_keys(password)
+        
+        check_box_terms.click()
+
+        if newsletter == "no":
+            check_box_newsletter.click()
+
+        #save.click()
+
+    def search_product(self, name=None):
+        search = self.find_element(By.XPATH, "//input[@placeholder='Search our catalog']")
+        search.clear()
+        search.send_keys(name)
+        send_search=self.find_element(By.CSS_SELECTOR, ".search")
+        send_search.click()
+        time.sleep(2)
+    
+    def sort_products(self, condition=None):
+        sort_dropdown= self.find_element(By.XPATH, "//button[@data-toggle='dropdown']")
+        sort_dropdown.click()
+        select_condition=self.find_element(By.PARTIAL_LINK_TEXT, condition)
+        select_condition.click()
+
+    def filter_by(self):
+        pass
+
+    def navigate_to_page(self, to=None):
+        if str(to).lower() == "next":
+            self.find_element(By.XPATH, "//ul[@class='page-list clearfix text-xs-center text-md-right']/li/a[@class='next js-search-link']").click()
+        elif str(to).lower() == "previous":
+            self.find_element(By.XPATH, "//ul[@class='page-list clearfix text-xs-center text-md-right']/li/a[@class='previous js-search-link']").click()
+        # else:
+        #     try:
+        #         self.find_element(By.XPATH, "//ul[@class='page-list clearfix text-xs-center text-md-right']/li/a").click()
+        #     except:
+        #         print("Could not process the navigation action.")
+
+
+
+
+
 ##################################################################################################################################################
     def click_on_banner(self):
         banner = self.find_element(By.XPATH, '//a[@href="/module/spareparts/mainPage"]')
         banner.click()
     
-    def newsletter_subscribe(self):
+    def newsletter_subscribe(self, email=None):
         newsletter = self.find_element(By.ID, "email_field")
-        newsletter.send_keys("bianca@xcommerce.eu")
+        newsletter.send_keys(email)
         
         check_box = self.find_element(By.ID, "psgdpr_consent_checkbox_104")
         check_box.click()
