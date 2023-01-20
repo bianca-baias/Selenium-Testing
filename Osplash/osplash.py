@@ -158,7 +158,7 @@ class Osplash(webdriver.Firefox):
         send_search.click()
         time.sleep(2)
     
-    def sort_products(self, condition=None):
+    def sort_products(self, condition=None): #Popularity, Newest, Name A to Z, Name Z to A, Price low to high, Price high to low
         sort_dropdown= self.find_element(By.XPATH, "//button[@data-toggle='dropdown']")
         sort_dropdown.click()
         select_condition=self.find_element(By.PARTIAL_LINK_TEXT, condition)
@@ -167,18 +167,36 @@ class Osplash(webdriver.Firefox):
     def filter_by(self):
         pass
 
-    def navigate_to_page(self, to=None):
+    def navigate_to_page(self, to=None): #next, previous, or page number
+
         if str(to).lower() == "next":
-            self.find_element(By.XPATH, "//ul[@class='page-list clearfix text-xs-center text-md-right']/li/a[@class='next js-search-link']").click()
+            try:
+                self.find_element(By.XPATH, "//ul[@class='page-list clearfix text-xs-center text-md-right']/li/a[@class='next js-search-link']").click()
+            except:
+                print("Next page is not available. You are already on the last page.")
+        
         elif str(to).lower() == "previous":
-            self.find_element(By.XPATH, "//ul[@class='page-list clearfix text-xs-center text-md-right']/li/a[@class='previous js-search-link']").click()
-        # else:
-        #     try:
-        #         self.find_element(By.XPATH, "//ul[@class='page-list clearfix text-xs-center text-md-right']/li/a").click()
-        #     except:
-        #         print("Could not process the navigation action.")
+            try:
+                self.find_element(By.XPATH, "//ul[@class='page-list clearfix text-xs-center text-md-right']/li/a[@class='previous js-search-link']").click()
+            except:
+                print("Previous page not available. You are already on the first page.")
+        
+        else:
+            try:
+                self.find_element(By.XPATH, f".//a[@class='js-search-link' and contains(text(), '{to}')]").click()
+            except:
+                print(f"Could not navigate to page {to}.")
 
-
+    def get_products_in_page(self): #creates a file with the titles and prices of all the products in a page
+        if os.path.exists("Products.txt"):
+            os.remove("Products.txt")
+        with open("Products.txt", "a") as f:
+            products= self.find_elements(By.XPATH, "//article[@class='col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xxl-3 product-miniature js-product-miniature']")
+            for prod in products:
+                f.write(prod.find_element(By.CLASS_NAME, "tooltipGeneral").get_attribute("title") + " - ")
+                f.write(prod.find_element(By.CLASS_NAME, "price").get_attribute("textContent"))
+                f.write("\n")
+            
 
 
 
