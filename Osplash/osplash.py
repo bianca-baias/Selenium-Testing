@@ -157,6 +157,13 @@ class Osplash(webdriver.Firefox):
         send_search=self.find_element(By.CSS_SELECTOR, ".search")
         send_search.click()
         time.sleep(2)
+        try:
+            no_products_found=self.find_element(By.XPATH, "//section[@id='content']/h4")
+            if no_products_found.text == "Sorry for the inconvenience.":
+                print(f"No products were found with title {name}.")
+            return False
+        except:
+            return True
     
     def sort_products(self, condition=None): #Popularity, Newest, Name A to Z, Name Z to A, Price low to high, Price high to low
         sort_dropdown= self.find_element(By.XPATH, "//button[@data-toggle='dropdown']")
@@ -196,16 +203,46 @@ class Osplash(webdriver.Firefox):
                 f.write(prod.find_element(By.CLASS_NAME, "tooltipGeneral").get_attribute("title") + " - ")
                 f.write(prod.find_element(By.CLASS_NAME, "price").get_attribute("textContent"))
                 f.write("\n")
-            
-
-
-
-##################################################################################################################################################
-    def click_on_banner(self):
-        banner = self.find_element(By.XPATH, '//a[@href="/module/spareparts/mainPage"]')
-        banner.click()
     
-    def newsletter_subscribe(self, email=None):
+    def click_on_product(self, number=None): #after a search is done, click on the x'th product (number= x; 1-first product)
+        try:
+            product=self.find_elements(By.XPATH, "//article[@class='col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xxl-3 product-miniature js-product-miniature']")
+            product[int(number)-1].click()
+        except:
+            nr_of_products= self.find_element(By.XPATH, "//div[@id='js-product-list-top']/div[@class='col-md-6 hidden-sm-down total-products']/p").text
+            nr_of_products= nr_of_products.split()
+            if int(nr_of_products[2]) < number:
+                print(f"You searched for product number {number}, but there are only {nr_of_products[2]} products found. Please enter a number between this range.")
+            else:
+                page_number= int(number/29) + 1
+                self.navigate_to_page(page_number)
+                time.sleep(3)
+                nr= number - ((page_number-1)*28)
+                self.click_on_product(nr)
+
+    def add_to_cart(self, quantity=None): #adds a product in cart with given quantity, then presses "Continue shopping" button
+        increase_quantity=self.find_element(By.XPATH, "//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']")
+        for _ in range(quantity - 1):
+            increase_quantity.click()
+
+        try:
+            add_to_cart = self.find_element(By.XPATH, "//button[@id='add_to_cart']")
+            add_to_cart.click()
+            time.sleep(3)
+
+            continue_shopping = self.find_element(By.XPATH, "//button[@class='btn btn-secondary']")
+            continue_shopping.click()
+            # go_to_cart = self.find_element(By.XPATH, "//div[@class='cart-content-btn']/a[@class='btn btn-primary']")
+            # go_to_cart.click()
+        except:
+            product_reference=self.find_element(By.XPATH, "//div[@id='product-details']/div[@class='product-reference']/span")
+            print(f"Could not add the product with reference {product_reference.text} in cart. Please check if it's in stock.")
+
+    def method():
+        pass
+##################################################################################################################################################
+
+    def subscribe_to_newsletter(self, email=None):
         newsletter = self.find_element(By.ID, "email_field")
         newsletter.send_keys(email)
         
@@ -215,17 +252,4 @@ class Osplash(webdriver.Firefox):
         subscribe = self.find_element(By.NAME, "submitNewsletter")
         subscribe.click()
     
-    def click_on_product(self):
-        desired_product = self.find_element(By.XPATH, "/html/body/main/section/div/div[3]/section/section/div[3]/div/div[1]/article[1]")
-        desired_product.click()
     
-    def add_to_cart(self):
-        add_to_cart = self.find_element(By.XPATH, "//*[@id='add_to_cart']")
-        add_to_cart.click()
-        time.sleep(3)
-
-        go_to_cart = self.find_element(By.CSS_SELECTOR, ".cart-content-btn > a:nth-child(2)")
-        go_to_cart.click()
-
-        # continue_shopping = self.find_element(By.CSS_SELECTOR,".cart-content-btn > button:nth-child(1)")
-        # continue_shopping.click()

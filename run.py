@@ -3,12 +3,9 @@ import time
 
 with Osplash() as bot:
     bot.land_first_page()
-    time.sleep(1)
-    bot.search_product("Chlorine")
-    time.sleep(1)
-    bot.get_products_in_page()
-
-
+    bot.search_product("sdfsd")
+    #bot.click_on_product(112)
+    #bot.add_to_cart(2)
 
     #bot.forgot_password("bianca@xcom")
     #bot.login(id="bianca@xcommerce", psw="123456")
